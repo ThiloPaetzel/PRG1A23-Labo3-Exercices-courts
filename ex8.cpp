@@ -8,6 +8,21 @@ using namespace std;
 // d'un fichier dont le nom est passé en paramètre. Il doit retourner
 // une valeur négative en cas d'impossibilité d'ouvrir le fichier
 
+int nb_lignes(string filename) {
+   ifstream file(filename);
+   if (!file.is_open()) {
+      return -1;
+   }
+
+   int n = 0;
+   string line;
+   while (getline(file, line)) {
+      n++;
+   }
+
+   return n;
+}
+
 int main() {
    cout << "Entrez le nom du fichier : " << flush;
    string filename; cin >> filename;

@@ -32,6 +32,21 @@ using namespace std;
 //| 70: p | 71: q | 72: r | 73: s | 74: t | 75: u | 76: v | 77: w |
 //| 78: x | 79: y | 7A: z | 7B: { | 7C: | | 7D: } | 7E: ~ | 7F:   |
 
+string ascii_table(int n) {
+   cout << setfill(' ') << setw(3) << hex << uppercase;
+   for (int i = 0; i < 128; ++i) {
+      if (i % n == 0) {
+         cout << endl << "|";
+      }
+      if (isprint(i)) {
+         cout << setw(3) << i << ": " << setw(2) << (char)i << " |";
+      } else {
+         cout << setw(3) << i << ":   |";
+      }
+   }
+   cout << endl;
+}
+
 int main() {
    ascii_table(8);
 }

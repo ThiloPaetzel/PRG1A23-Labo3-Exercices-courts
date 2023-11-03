@@ -8,6 +8,20 @@ using namespace std;
 // pour b entre 2 et 36. Les chiffres de 10 à 35 utilisent
 // les lettres majuscules de A à Z.
 
+string en_base(int n, int b) {
+   string result = "";
+   while (n > 0) {
+      int digit = n % b;
+      if (digit < 10) {
+         result = to_string(digit) + result;
+      } else {
+         result = (char)('A' + digit - 10) + result;
+      }
+      n /= b;
+   }
+   return result;
+}
+
 int main() {
 
   for(int b = 2; b <= 36; ++b)

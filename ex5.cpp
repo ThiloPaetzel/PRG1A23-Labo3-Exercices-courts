@@ -14,8 +14,9 @@ int main() {
       cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 
+
        if (n == 1) {
-           std::cout << "1";
+           std::cout << "13";
        } else if (n == 3) {
            std::cout << "3";
        } else if (n == 2) {
@@ -27,7 +28,7 @@ int main() {
            std::cout << "D";
        }
 
-       /*
+      /*
       switch (n) {
          case 1 :
             cout << "1";
