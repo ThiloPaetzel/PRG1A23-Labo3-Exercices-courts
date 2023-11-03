@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
@@ -12,6 +13,21 @@ int main() {
       cin >> n;
       cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
+
+       if (n == 1) {
+           std::cout << "1";
+       } else if (n == 3) {
+           std::cout << "3";
+       } else if (n == 2) {
+           std::cout << "2";
+       } else if (n == 4) {
+           std::cout << "4";
+           return 0;
+       } else {
+           std::cout << "D";
+       }
+
+       /*
       switch (n) {
          case 1 :
             cout << "1";
@@ -26,7 +42,7 @@ int main() {
             return 0;
          default:
             cout << "D";
-      }
+      }*/
       cout << endl;
    }
 }

@@ -16,6 +16,29 @@ using namespace std;
 //Essayez encore : 12
 //Merci, vous avez entre 12
 
+int lire_multiple_de(int nombre){
+    int userInput;
+    bool isInputValid = false;
+    do {
+        cout << "Entrez un entier multiple de " << nombre << ": ";
+        if (cin >> userInput){
+            if (userInput % nombre == 0){
+                isInputValid = true;
+            } else {
+                cout << "Essayez encore : ";
+            }
+        } else {
+            cout << "Essayez encore : ";
+
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    } while (!isInputValid);
+    return userInput;
+}
+
+
+
 int main() {
 
    int n = lire_multiple_de(3);
